@@ -1,43 +1,180 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Сергей Геннадьевич Филимонов — официальный сайт</title>
+
+  <!-- Газетный шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body{margin:0;padding:0;background:#0e0e0e;color:#e0e0e0;font-family:Georgia,"Times New Roman",serif;line-height:1.7}
-    .container{max-width:1000px;margin:72px auto;padding:0 20px}
-    h1{font-weight:normal;font-size:38px;letter-spacing:1px;margin:0 0 10px}
-    .lead{margin:0 0 26px;font-size:18px;color:#cfcfcf}
-    h2{font-weight:normal;margin:44px 0 14px;font-size:24px}
-    p{margin:14px 0}
-    .divider{margin:40px 0;border-top:1px solid #3f3f3f}
-    a{color:#e0e0e0}
-    a.button{display:inline-block;margin-top:16px;padding:12px 26px;border:1px solid #e0e0e0;color:#e0e0e0;text-decoration:none;letter-spacing:1px}
-    a.button:hover{background:#e0e0e0;color:#0e0e0e}
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0e0e0e;
+      color: #e0e0e0;
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    /* лёгкая бумажная фактура */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 72px auto;
+      padding: 0 22px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 38px;
+      letter-spacing: 1px;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #cfcfcf;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      margin: 48px 0 16px;
+    }
+
+    p {
+      margin: 14px 0;
+    }
+
+    .divider {
+      margin: 44px 0;
+      border-top: 1px solid #3f3f3f;
+    }
+
+    a {
+      color: #e0e0e0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 26px;
+      border: 1px solid #e0e0e0;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    a.button:hover {
+      background: #e0e0e0;
+      color: #0e0e0e;
+    }
 
     /* Автор */
-    .about-wrap{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
-    .author-photo{width:280px;max-width:100%;height:auto;border:1px solid #3f3f3f}
-    .about-text{flex:1;min-width:280px}
+    .about-wrap {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .author-photo {
+      width: 280px;
+      max-width: 100%;
+      border: 1px solid #3f3f3f;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
 
     /* Книги */
-    .book{margin:22px 0 34px;padding:18px;border:1px solid #2f2f2f}
-    .book-header{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
-    .cover{width:160px;max-width:100%;height:auto;border:1px solid #3f3f3f}
-    .book-body{flex:1;min-width:280px}
-    .book-title{font-size:20px;margin:0 0 8px}
-    .book p{margin:10px 0;color:#d6d6d6}
+    .book {
+      margin: 26px 0 36px;
+      padding: 18px;
+      border: 1px solid #2f2f2f;
+    }
+
+    .book-header {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .cover {
+      width: 160px;
+      border: 1px solid #3f3f3f;
+    }
+
+    .book-body {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .book-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .book p {
+      color: #d6d6d6;
+    }
 
     /* Отзывы */
-    .reviews{margin-top:10px}
-    .review{margin:16px 0;padding:16px 18px;border-left:3px solid #3f3f3f;background:rgba(255,255,255,0.03)}
-    .review p{margin:10px 0}
-    .review .who{color:#a9a9a9;font-size:14px;margin-top:8px}
+    .review {
+      margin: 18px 0;
+      padding: 16px 18px;
+      border-left: 3px solid #3f3f3f;
+      background: rgba(255,255,255,0.03);
+    }
 
-    footer{margin-top:80px;font-size:14px;color:#777}
+    .review .who {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #a9a9a9;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* газетное выравнивание только на широких экранах */
+    @media (min-width: 900px) {
+      p {
+        text-align: justify;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
 
@@ -46,7 +183,7 @@
 
     <h2>Об авторе</h2>
     <div class="about-wrap">
-      <img class="author-photo" src="author.jpg" alt="Сергей Геннадьевич Филимонов">
+      <img src="author.jpg" alt="Сергей Геннадьевич Филимонов" class="author-photo">
       <div class="about-text">
         <p>
           Сергей Геннадьевич Филимонов — писатель, работающий на стыке психологической прозы и нуара.
@@ -54,13 +191,15 @@
           не биографической деталью, а внутренней оптикой — вниманием к мотивам, ответственности и цене выбора.
         </p>
         <p>
-          В своих текстах он обращается к темам памяти, вины, власти и тишины — той самой паузы,
-          в которой человек остаётся наедине с собой. Его проза строится на недосказанности,
-          внутреннем напряжении и ощущении времени как самостоятельного действующего лица.
+          В своих текстах он обращается к темам памяти, вины, власти и тишины —
+          той самой паузы, в которой человек остаётся наедине с собой.
+          Его проза строится на недосказанности, внутреннем напряжении
+          и ощущении времени как самостоятельного действующего лица.
         </p>
         <p>
           Автор романов «Пепел Чикаго», «1932: Дело Кирстена» и сборника рассказов
-          «Когда становится слишком тихо». Эти книги объединяет не жанр, а интонация —
+          «Когда становится слишком тихо».
+          Эти книги объединяет не жанр, а интонация —
           внимание к человеку в моменте морального напряжения.
         </p>
         <p>
@@ -75,22 +214,12 @@
     <h2>Пепел Чикаго</h2>
     <div class="book">
       <div class="book-header">
-        <img class="cover" src="cover-pepel.jpg" alt="Пепел Чикаго">
+        <img src="cover-pepel.jpg" class="cover" alt="Пепел Чикаго">
         <div class="book-body">
-          <div class="book-title"><strong>Пепел Чикаго</strong></div>
-          <p>
-            Чикаго начала XX века — город, который умеет забывать.
-            Здесь прошлое исчезает быстрее людей, а власть живёт дольше тех, кто ей служит.
-          </p>
-          <p>
-            Когда закон сталкивается с системой, победителей не бывает.
-            Остаётся только выбор — исчезнуть вместе с прошлым или остаться и заплатить за память.
-          </p>
-          <p>
-            История тишины после пожара, власти без лица и того,
-            что даже в мире, где всё превращается в пепел,
-            некоторые решения продолжают гореть.
-          </p>
+          <div class="book-title">Пепел Чикаго</div>
+          <p>Чикаго начала XX века — город, который умеет забывать.</p>
+          <p>Когда закон сталкивается с системой, победителей не бывает.</p>
+          <p>История тишины после пожара и решений, которые продолжают гореть.</p>
           <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/pepel-chikago-73009467/" target="_blank">
             Читать на ЛитРес
           </a>
@@ -104,24 +233,10 @@
 
     <div class="book">
       <div class="book-header">
-        <img class="cover" src="cover-1932.jpg" alt="1932: Дело Кирстена">
+        <img src="cover-1932.jpg" class="cover" alt="1932: Дело Кирстена">
         <div class="book-body">
-          <div class="book-title"><strong>1932: Дело Кирстена</strong></div>
-          <p>
-            1932 год. Ластхоуп окутан осенним туманом,
-            но настоящая тьма скрывается за стенами особняка Кирстенов.
-          </p>
-          <p>
-            Когда из дома исчезает маленький Кевин,
-            его отец — влиятельный сенатор Алан Кирстен —
-            готов на всё, чтобы вернуть сына.
-            Но чем глубже он погружается в поиски,
-            тем страшнее становится правда.
-          </p>
-          <p>
-            В расследование вмешивается Брюс Баттерс —
-            спившийся детектив с острым умом и тёмным прошлым.
-          </p>
+          <div class="book-title">1932: Дело Кирстена</div>
+          <p>1932 год. Исчезновение ребёнка вскрывает политическую и человеческую гниль.</p>
           <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/1932-delo-kirstena-72132622/" target="_blank">
             Открыть на ЛитРес
           </a>
@@ -131,18 +246,10 @@
 
     <div class="book">
       <div class="book-header">
-        <img class="cover" src="cover-quiet.jpg" alt="Когда становится слишком тихо">
+        <img src="cover-quiet.jpg" class="cover" alt="Когда становится слишком тихо">
         <div class="book-body">
-          <div class="book-title"><strong>Когда становится слишком тихо</strong></div>
-          <p>
-            «Когда становится слишком тихо» — это нуар без выстрелов и погони,
-            где главное преступление совершается внутри человека.
-          </p>
-          <p>
-            В этих рассказах нет злодеев и святых.
-            Есть только люди, которые слишком долго смотрели в темноту
-            и начали различать в ней собственные очертания.
-          </p>
+          <div class="book-title">Когда становится слишком тихо</div>
+          <p>Нуар-рассказы о тишине, в которой человек остаётся один на один с собой.</p>
           <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/kogda-stanovitsya-slishkom-tiho-72705298/" target="_blank">
             Открыть на ЛитРес
           </a>
@@ -153,28 +260,17 @@
     <div class="divider"></div>
 
     <h2>Отзывы читателей</h2>
-    <div class="reviews">
-      <div class="review">
-        <p>
-          «Редкий случай, когда нуар — не стилизация, а внутреннее состояние текста.
-          Здесь нет эффектных поз, только давление выбора и ощущение времени».
-        </p>
-        <div class="who">— читатель</div>
-      </div>
-      <div class="review">
-        <p>
-          «Читается медленно и намеренно — не потому что тяжело,
-          а потому что каждую паузу хочется выдержать».
-        </p>
-        <div class="who">— читатель</div>
-      </div>
-      <div class="review">
-        <p>
-          «Филимонов пишет не о победе, а о том,
-          что остаётся после неё».
-        </p>
-        <div class="who">— читатель</div>
-      </div>
+    <div class="review">
+      <p>«Это не стилизация под нуар, а внутренняя тишина, в которой слышно, как думает герой.»</p>
+      <div class="who">— читатель</div>
+    </div>
+    <div class="review">
+      <p>«Читаешь медленно, потому что текст не терпит спешки.»</p>
+      <div class="who">— читатель</div>
+    </div>
+    <div class="review">
+      <p>«Здесь нет правильных ответов — и в этом главная честность.»</p>
+      <div class="who">— читатель</div>
     </div>
 
     <footer>

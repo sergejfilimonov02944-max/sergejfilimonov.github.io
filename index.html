@@ -6,55 +6,47 @@
   <title>Сергей Геннадьевич Филимонов — официальный сайт</title>
   <style>
     body{margin:0;padding:0;background:#0e0e0e;color:#e0e0e0;font-family:Georgia,"Times New Roman",serif;line-height:1.7}
-    .container{max-width:980px;margin:72px auto;padding:0 20px}
+    .container{max-width:1000px;margin:72px auto;padding:0 20px}
     h1{font-weight:normal;font-size:38px;letter-spacing:1px;margin:0 0 10px}
     .lead{margin:0 0 26px;font-size:18px;color:#cfcfcf}
-    h2{font-weight:normal;margin:44px 0 12px;font-size:24px}
+    h2{font-weight:normal;margin:44px 0 14px;font-size:24px}
     p{margin:14px 0}
-    .divider{margin:34px 0;border-top:1px solid #3f3f3f}
+    .divider{margin:40px 0;border-top:1px solid #3f3f3f}
     a{color:#e0e0e0}
-    a.button{display:inline-block;margin-top:14px;padding:12px 22px;border:1px solid #e0e0e0;color:#e0e0e0;text-decoration:none;letter-spacing:1px}
+    a.button{display:inline-block;margin-top:16px;padding:12px 26px;border:1px solid #e0e0e0;color:#e0e0e0;text-decoration:none;letter-spacing:1px}
     a.button:hover{background:#e0e0e0;color:#0e0e0e}
 
-    /* Авторский блок: фото слева, текст справа */
-    .about-wrap{
-      display:flex;
-      gap:22px;
-      align-items:flex-start;
-      margin-top:14px;
-      flex-wrap:wrap;
-    }
-    .author-photo{
-      width:260px;
-      max-width:100%;
-      height:auto;
-      display:block;
-      border:1px solid #3f3f3f;
-    }
-    .about-text{flex:1;min-width:260px}
+    /* Автор */
+    .about-wrap{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+    .author-photo{width:280px;max-width:100%;height:auto;border:1px solid #3f3f3f}
+    .about-text{flex:1;min-width:280px}
 
     /* Книги */
-    .book{
-      margin:18px 0 26px;
-      padding:16px 16px;
-      border:1px solid #2f2f2f;
-    }
-    .book-title{font-size:18px;margin:0 0 8px}
+    .book{margin:22px 0 34px;padding:18px;border:1px solid #2f2f2f}
+    .book-header{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+    .cover{width:160px;max-width:100%;height:auto;border:1px solid #3f3f3f}
+    .book-body{flex:1;min-width:280px}
+    .book-title{font-size:20px;margin:0 0 8px}
     .book p{margin:10px 0;color:#d6d6d6}
-    footer{margin-top:70px;font-size:14px;color:#777}
+
+    /* Отзывы */
+    .reviews{margin-top:10px}
+    .review{margin:16px 0;padding:16px 18px;border-left:3px solid #3f3f3f;background:rgba(255,255,255,0.03)}
+    .review p{margin:10px 0}
+    .review .who{color:#a9a9a9;font-size:14px;margin-top:8px}
+
+    footer{margin-top:80px;font-size:14px;color:#777}
   </style>
 </head>
 <body>
   <div class="container">
+
     <h1>Сергей Геннадьевич Филимонов</h1>
     <p class="lead">Психологическая проза и нуар.</p>
 
     <h2>Об авторе</h2>
-
     <div class="about-wrap">
-      <!-- Фото автора: файл author.jpg должен лежать в корне репозитория -->
       <img class="author-photo" src="author.jpg" alt="Сергей Геннадьевич Филимонов">
-
       <div class="about-text">
         <p>
           Сергей Геннадьевич Филимонов — писатель, работающий на стыке психологической прозы и нуара.
@@ -72,8 +64,8 @@
           внимание к человеку в моменте морального напряжения.
         </p>
         <p>
-          Филимонов пишет для читателя, который не ищет готовых ответов. Его тексты — это пространство,
-          где важно не объяснение, а соучастие.
+          Филимонов пишет для читателя, который не ищет готовых ответов.
+          Его тексты — это пространство, где важно не объяснение, а соучастие.
         </p>
       </div>
     </div>
@@ -81,62 +73,114 @@
     <div class="divider"></div>
 
     <h2>Пепел Чикаго</h2>
-    <p>
-      Чикаго начала XX века — город, который умеет забывать. Здесь прошлое исчезает быстрее людей,
-      а власть живёт дольше тех, кто ей служит.
-    </p>
-    <p>
-      Когда закон сталкивается с системой, победителей не бывает. Остаётся только выбор —
-      исчезнуть вместе с прошлым или остаться и заплатить за память.
-    </p>
-    <p>
-      История тишины после пожара, власти без лица и того, что даже в мире, где всё превращается в пепел,
-      некоторые решения продолжают гореть.
-    </p>
-
-    <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/pepel-chikago-73009467/" target="_blank" rel="noopener">
-      Читать на ЛитРес
-    </a>
+    <div class="book">
+      <div class="book-header">
+        <img class="cover" src="cover-pepel.jpg" alt="Пепел Чикаго">
+        <div class="book-body">
+          <div class="book-title"><strong>Пепел Чикаго</strong></div>
+          <p>
+            Чикаго начала XX века — город, который умеет забывать.
+            Здесь прошлое исчезает быстрее людей, а власть живёт дольше тех, кто ей служит.
+          </p>
+          <p>
+            Когда закон сталкивается с системой, победителей не бывает.
+            Остаётся только выбор — исчезнуть вместе с прошлым или остаться и заплатить за память.
+          </p>
+          <p>
+            История тишины после пожара, власти без лица и того,
+            что даже в мире, где всё превращается в пепел,
+            некоторые решения продолжают гореть.
+          </p>
+          <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/pepel-chikago-73009467/" target="_blank">
+            Читать на ЛитРес
+          </a>
+        </div>
+      </div>
+    </div>
 
     <div class="divider"></div>
 
     <h2>Другие книги</h2>
 
     <div class="book">
-      <div class="book-title"><strong>1932: Дело Кирстена</strong></div>
-      <p>
-        1932 год. Ластхоуп окутан осенним туманом, но настоящая тьма скрывается за стенами особняка Кирстенов.
-      </p>
-      <p>
-        Когда из дома исчезает маленький Кевин, а на пороге появляется записка с требованием выкупа, его отец — влиятельный сенатор Алан Кирстен — готов на всё, чтобы вернуть сына. Но чем глубже он погружается в поиски, тем страшнее становится правда.
-      </p>
-      <p>
-        В расследование вмешивается Брюс Баттерс— спившийся детектив с острым умом и тёмным прошлым. Он уверен: преступник не случайно выбрал семью Кирстенов. Но чтобы раскрыть дело, ему придётся разгрести не только улики, но и грязь политических интриг, семейных тайн и идеологий, ради которых люди готовы на убийство.
-      </p>
-      <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/1932-delo-kirstena-72132622/" target="_blank" rel="noopener">
-        Открыть на ЛитРес
-      </a>
+      <div class="book-header">
+        <img class="cover" src="cover-1932.jpg" alt="1932: Дело Кирстена">
+        <div class="book-body">
+          <div class="book-title"><strong>1932: Дело Кирстена</strong></div>
+          <p>
+            1932 год. Ластхоуп окутан осенним туманом,
+            но настоящая тьма скрывается за стенами особняка Кирстенов.
+          </p>
+          <p>
+            Когда из дома исчезает маленький Кевин,
+            его отец — влиятельный сенатор Алан Кирстен —
+            готов на всё, чтобы вернуть сына.
+            Но чем глубже он погружается в поиски,
+            тем страшнее становится правда.
+          </p>
+          <p>
+            В расследование вмешивается Брюс Баттерс —
+            спившийся детектив с острым умом и тёмным прошлым.
+          </p>
+          <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/1932-delo-kirstena-72132622/" target="_blank">
+            Открыть на ЛитРес
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="book">
-      <div class="book-title"><strong>Когда становится слишком тихо</strong></div>
-      <p>
-        «Когда становится слишком тихо» — это нуар рассказы без выстрелов и погони, где главное преступление совершается внутри человека.
-      </p>
-      <p>
-        В этих рассказах нет злодеев и святых.
-      </p>
-      <p>
-        Есть только люди, которые слишком долго смотрели в темноту и начали различать в ней собственные очертания.
-      </p>
-      <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/kogda-stanovitsya-slishkom-tiho-72705298/" target="_blank" rel="noopener">
-        Открыть на ЛитРес
-      </a>
+      <div class="book-header">
+        <img class="cover" src="cover-quiet.jpg" alt="Когда становится слишком тихо">
+        <div class="book-body">
+          <div class="book-title"><strong>Когда становится слишком тихо</strong></div>
+          <p>
+            «Когда становится слишком тихо» — это нуар без выстрелов и погони,
+            где главное преступление совершается внутри человека.
+          </p>
+          <p>
+            В этих рассказах нет злодеев и святых.
+            Есть только люди, которые слишком долго смотрели в темноту
+            и начали различать в ней собственные очертания.
+          </p>
+          <a class="button" href="https://www.litres.ru/book/sergey-gennadevich-filimonov/kogda-stanovitsya-slishkom-tiho-72705298/" target="_blank">
+            Открыть на ЛитРес
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Отзывы читателей</h2>
+    <div class="reviews">
+      <div class="review">
+        <p>
+          «Редкий случай, когда нуар — не стилизация, а внутреннее состояние текста.
+          Здесь нет эффектных поз, только давление выбора и ощущение времени».
+        </p>
+        <div class="who">— читатель</div>
+      </div>
+      <div class="review">
+        <p>
+          «Читается медленно и намеренно — не потому что тяжело,
+          а потому что каждую паузу хочется выдержать».
+        </p>
+        <div class="who">— читатель</div>
+      </div>
+      <div class="review">
+        <p>
+          «Филимонов пишет не о победе, а о том,
+          что остаётся после неё».
+        </p>
+        <div class="who">— читатель</div>
+      </div>
     </div>
 
     <footer>
       <p>© Сергей Геннадьевич Филимонов</p>
     </footer>
+
   </div>
 </body>
 </html>
